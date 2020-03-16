@@ -71,5 +71,3 @@ You can see the expected output can be found in [expectedOutput.json](./expected
 
 ## Submission
 The submission should be committed to Github and a link provided to the submission along with a readme on how to setup and run the solution. The solution is expected to incorporate good software development practices such as comments and tests.
-
-Any questions, please contact talent@hireup.com.au.
