@@ -67,7 +67,3 @@ Your application should create a file called output.json containing the array of
 ]
 ```
 You can see the expected output can be found in [expectedOutput.json](./expectedOutput.json)
-
-
-## Submission
-The submission should be committed to Github and a link provided to the submission along with a readme on how to setup and run the solution. The solution is expected to incorporate good software development practices such as comments and tests.
