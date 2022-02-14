@@ -1,11 +1,18 @@
-# Backend Assessment
-## Overview
-We'd like you to build a calculator that determines the cost of Hireup bookings. A booking is the time worked by a support worker with a user.
+# Technical Assessment
 
-Your application should read a collection of bookings from a provided JSON file, calculate the cost of each booking and write the result to a new file.
+## Overview
+
+We'd like you to build a calculator that determines the cost of Hireup 
+bookings. A booking is the time worked by a support worker with a user.
+
+Your application should read a collection of bookings from a provided JSON 
+file, calculate the cost of each booking and write the result to a new file.
 
 ## Input
-We've included a file called input.json that contains a collection of bookings. Each booking has an id, a from datetime and to datetime:
+
+We've included a file called input.json that contains a collection of 
+bookings. Each booking has an id, a from datetime and to datetime:
+
 ```json
 [
   {
@@ -24,6 +31,7 @@ We've included a file called input.json that contains a collection of bookings. 
 ## Business rules
 
 ### Hourly rates
+
 The rules to calculate the hourly rate of a booking are summarised below:
 
 | Rate Type | From | To | Rate ($) |
@@ -38,15 +46,21 @@ The rules to calculate the hourly rate of a booking are summarised below:
 - The maximum booking time is 24 hours
 - A booking cannot end before it has started
 - A booking can be booked in 15 min increments e.g. 1600 to 1715
-- If any part of a booking is charged at the night rate, the whole booking is charged at the night rate:
+- If any part of a booking is charged at the night rate, the whole booking is 
+  charged at the night rate:
   * Fri 1800 - 2100 will be charged at the night rate (3 x 42.93)
   * Wed 0500 - 1000 will be charged at the night rate (5 x 42.93)
-- Saturday and Sunday rates apply across the whole day, there's no distinction between day and night:
+- Saturday and Sunday rates apply across the whole day, there's no distinction 
+  between day and night:
   * Sat 1800 - 2200 will be charged at the sat rate (4 x 45.91)
   * Sun 0100 - 0700 will be charged at the sun rate (6 x 60.85)
 
 ## Output
-Your application should create a file called output.json containing the array of booking objects with total and isValid properties added. If the booking breaks one of the business rules, the total should be set to 0 and the isValid flag marked false.
+
+Your application should create a file called output.json containing the array 
+of booking objects with total and isValid properties added. If the booking 
+breaks one of the business rules, the total should be set to 0 and the isValid 
+flag marked false.
 
 ```json
 [
@@ -66,4 +80,6 @@ Your application should create a file called output.json containing the array of
   },
 ]
 ```
-You can see the expected output can be found in [expectedOutput.json](./expectedOutput.json)
+
+You can see the expected output can be found in 
+[expectedOutput.json](./expectedOutput.json)
