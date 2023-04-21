@@ -4,7 +4,7 @@ import calculator from './calculator';
 // Currently the test asserts that the input is the same as the output
 
 describe('calculator', () => {
-  test('outputs booking details to be the same sa the input', () => {
+  test('outputs booking details to be the same as the input', () => {
     const input = [{
       "id": 1,
       "from": "2017-10-23T08:00:00+11:00",
